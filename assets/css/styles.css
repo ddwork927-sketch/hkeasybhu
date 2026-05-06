@@ -911,29 +911,28 @@ section { padding: clamp(54px, 9vw, 110px) 0; }
 /* ---------- Contact ---------- */
 .contact-grid {
   display: grid;
-  gap: 32px;
+  gap: 18px;
   grid-template-columns: 1fr;
 }
-.contact-channels {
-  display: grid;
-  gap: 14px;
+@media (min-width: 760px) {
+  .contact-grid { grid-template-columns: repeat(3, 1fr); }
 }
 .contact-card {
-  display: grid;
-  grid-template-columns: 48px 1fr;
-  align-items: center;
-  gap: 18px;
-  padding: 20px 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 26px 24px;
   background: var(--paper);
   border: 1px solid var(--line-soft);
-  border-radius: var(--radius);
-  transition: border-color .2s, transform .2s;
+  border-radius: var(--radius-lg);
+  transition: border-color .25s, transform .25s, box-shadow .25s;
 }
 .contact-card:hover {
   border-color: var(--teal);
-  transform: translateY(-1px);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
 }
-.contact-card .ico {
+.contact-card .contact-icon {
   width: 48px; height: 48px;
   border-radius: 50%;
   background: var(--teal-soft);
@@ -941,14 +940,14 @@ section { padding: clamp(54px, 9vw, 110px) 0; }
   align-items: center;
   justify-content: center;
   color: var(--teal-deep);
+  margin-bottom: 4px;
 }
-.contact-card strong {
-  display: block;
-  font-family: var(--sans);
-  font-size: 1.1rem;
+.contact-card h3 {
+  margin: 0;
+  font-size: 1.15rem;
+  letter-spacing: -0.02em;
   color: var(--ink);
 }
-.contact-card span { font-size: 14px; color: var(--muted); }
 
 .checklist {
   background: var(--paper);
@@ -1198,6 +1197,193 @@ section { padding: clamp(54px, 9vw, 110px) 0; }
   font-size: 14px;
   line-height: 1.55;
 }
+
+/* ---------- Two Lines (A/B) chooser ---------- */
+.lines {
+  display: grid;
+  gap: 18px;
+}
+.line-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  background: var(--paper);
+  border: 1px solid var(--line-soft);
+  border-radius: 22px;
+  padding: 32px 28px 28px;
+  overflow: hidden;
+  transition: transform .25s, border-color .25s, box-shadow .25s;
+}
+.line-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity .25s;
+}
+.line-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--teal);
+  box-shadow: var(--shadow-md);
+}
+.line-card .line-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--display);
+  font-weight: 800;
+  font-size: 13px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--teal-deep);
+}
+.line-card .line-tag::before {
+  content: "";
+  width: 36px;
+  height: 36px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--teal);
+  color: #fff;
+  font-family: var(--display);
+  font-weight: 800;
+  font-size: 1.05rem;
+  border-radius: 50%;
+  letter-spacing: 0;
+}
+.line-card.is-a .line-tag::before { content: "A"; }
+.line-card.is-b .line-tag::before { content: "B"; }
+
+.line-card h3 {
+  font-size: clamp(1.4rem, 3.4vw, 1.85rem);
+  margin: 0;
+  letter-spacing: -0.025em;
+}
+.line-card .line-q {
+  font-family: var(--sans);
+  color: var(--muted);
+  font-size: 14.5px;
+  margin: -4px 0 4px;
+  letter-spacing: 0.04em;
+}
+.line-card ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 8px;
+}
+.line-card ul li {
+  position: relative;
+  padding-left: 20px;
+  font-size: 14.5px;
+  line-height: 1.6;
+  color: var(--ink);
+}
+.line-card ul li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 9px;
+  width: 8px;
+  height: 8px;
+  background: var(--teal);
+  border-radius: 50%;
+}
+.line-card .line-foot {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding-top: 16px;
+  border-top: 1px dashed var(--line);
+}
+.line-card .line-price {
+  font-family: var(--display);
+  font-weight: 800;
+  font-size: 1.15rem;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+  font-feature-settings: "tnum";
+}
+.line-card .line-price small {
+  font-family: var(--sans);
+  font-weight: 500;
+  font-size: 12px;
+  color: var(--muted);
+  letter-spacing: 0;
+  margin-left: 4px;
+}
+.line-card .btn {
+  padding: 12px 22px;
+  font-size: 14.5px;
+}
+
+/* B card – inverted dark variant */
+.line-card.is-b {
+  background: var(--ink);
+  color: #ECE6D6;
+  border-color: var(--ink);
+}
+.line-card.is-b .line-tag { color: #6EE38C; }
+.line-card.is-b .line-tag::before { background: var(--teal); color: #fff; }
+.line-card.is-b h3 { color: #fff; }
+.line-card.is-b .line-q { color: #B8C5CF; }
+.line-card.is-b ul li { color: #ECE6D6; }
+.line-card.is-b ul li::before { background: var(--teal); }
+.line-card.is-b .line-foot { border-top-color: rgba(255, 255, 255, 0.12); }
+.line-card.is-b .line-price { color: #fff; }
+.line-card.is-b .line-price small { color: #93B7CC; }
+
+@media (min-width: 880px) {
+  .lines { grid-template-columns: 1fr 1fr; gap: 24px; }
+  .line-card { padding: 40px 36px 32px; }
+}
+
+/* ---------- Hero dual CTA stack ---------- */
+.hero-routes {
+  display: grid;
+  gap: 12px;
+  margin-top: 28px;
+}
+.hero-routes a {
+  display: grid;
+  grid-template-columns: 36px 1fr 22px;
+  gap: 14px;
+  align-items: center;
+  padding: 16px 22px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 14px;
+  color: #fff;
+  transition: background .2s, border-color .2s, transform .2s;
+}
+.hero-routes a:hover {
+  background: rgba(110, 227, 140, 0.14);
+  border-color: rgba(110, 227, 140, 0.5);
+  transform: translateX(2px);
+}
+.hero-routes .route-mark {
+  width: 36px;
+  height: 36px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--teal);
+  color: #fff;
+  font-family: var(--display);
+  font-weight: 800;
+  font-size: 1rem;
+  border-radius: 50%;
+  letter-spacing: 0;
+}
+.hero-routes strong { display: block; color: #fff; font-weight: 700; font-size: 0.98rem; letter-spacing: -0.01em; }
+.hero-routes span.route-sub { font-size: 13px; color: #B8C5CF; }
+.hero-routes .route-arrow { color: #6EE38C; font-size: 1.2rem; line-height: 1; }
 
 /* ---------- Manifesto / positioning section ---------- */
 .manifesto {
