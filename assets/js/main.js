@@ -62,7 +62,8 @@
       const target = document.querySelector(id);
       if (!target) return;
       e.preventDefault();
-      const top = target.getBoundingClientRect().top + window.pageYOffset - 78;
+      const headerOffset = window.innerWidth >= 1000 ? 96 : 76;
+      const top = target.getBoundingClientRect().top + window.pageYOffset - headerOffset;
       window.scrollTo({ top, behavior: 'smooth' });
     });
   });
