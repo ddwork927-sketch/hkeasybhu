@@ -1,0 +1,22 @@
+.DS_Store
+**/.DS_Store
+Thumbs.db
+
+# editor / OS
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# logs
+*.log
+npm-debug.log*
+
+# build / deps (defensive)
+node_modules/
+dist/
+build/
+
+# secrets
+.env
+.env.*
