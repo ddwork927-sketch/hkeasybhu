@@ -1269,6 +1269,99 @@ section { padding: clamp(54px, 9vw, 110px) 0; }
   line-height: 1.55;
 }
 
+/* ---------- Government links bar ---------- */
+.gov-bar {
+  display: grid;
+  gap: 18px;
+  padding: 22px 24px;
+  background: var(--paper);
+  border: 1px solid var(--line-soft);
+  border-radius: 16px;
+  border-left: 4px solid var(--teal);
+}
+.gov-bar-text {
+  font-size: 14.5px;
+  line-height: 1.7;
+  color: var(--ink);
+}
+.gov-bar-text strong {
+  display: block;
+  font-size: 1.05rem;
+  margin-bottom: 4px;
+  color: var(--ink);
+  letter-spacing: -0.01em;
+}
+.gov-bar-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 18px;
+  align-items: center;
+}
+.gov-bar-links a {
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--teal-deep);
+  letter-spacing: 0.01em;
+  border-bottom: 1.5px solid transparent;
+  padding-bottom: 1px;
+  transition: border-color .15s, color .15s;
+}
+.gov-bar-links a:hover {
+  border-bottom-color: var(--teal);
+  color: var(--teal);
+}
+@media (min-width: 760px) {
+  .gov-bar { grid-template-columns: 1.4fr 1fr; align-items: center; gap: 28px; padding: 24px 30px; }
+  .gov-bar-links { justify-content: flex-end; }
+}
+
+/* ---------- Anson / case manager profile ---------- */
+.profile {
+  display: grid;
+  gap: 22px;
+  padding: 28px 26px;
+  background: var(--paper);
+  border: 1px solid var(--line-soft);
+  border-radius: 22px;
+  margin: 16px 0;
+}
+.profile-avatar {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 96px; height: 96px;
+  background: linear-gradient(135deg, var(--teal-soft), var(--cream-2));
+  color: var(--teal-deep);
+  font-family: var(--display);
+  font-weight: 800;
+  font-size: 2.4rem;
+  border-radius: 50%;
+  letter-spacing: -0.02em;
+  flex-shrink: 0;
+}
+.profile-body h3 {
+  margin: 0 0 4px;
+  font-size: 1.25rem;
+}
+.profile-tag {
+  display: inline-block;
+  font-family: var(--display);
+  font-weight: 700;
+  font-size: 11.5px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--teal-deep);
+  background: var(--teal-soft);
+  padding: 4px 10px;
+  border-radius: 999px;
+  margin-bottom: 10px;
+}
+.profile-body p { margin: 0 0 8px; font-size: 14.8px; line-height: 1.75; }
+.profile-body p.muted { font-size: 13.5px; }
+@media (min-width: 720px) {
+  .profile { grid-template-columns: 96px 1fr; gap: 28px; padding: 32px 32px; }
+}
+
 /* ---------- Two Lines (A/B) chooser ---------- */
 .lines {
   display: grid;

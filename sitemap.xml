@@ -3,7 +3,7 @@
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://www.hkeasybhu.com/</loc>
-    <lastmod>2026-05-06</lastmod>
+    <lastmod>2026-05-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.hkeasybhu.com/" />
@@ -11,30 +11,51 @@
   </url>
   <url>
     <loc>https://www.hkeasybhu.com/registration-support</loc>
-    <lastmod>2026-05-06</lastmod>
+    <lastmod>2026-05-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
     <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.hkeasybhu.com/registration-support" />
   </url>
   <url>
     <loc>https://www.hkeasybhu.com/feasibility-engineering</loc>
-    <lastmod>2026-05-06</lastmod>
+    <lastmod>2026-05-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
     <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.hkeasybhu.com/feasibility-engineering" />
   </url>
   <url>
+    <loc>https://www.hkeasybhu.com/what-is-bhu</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.hkeasybhu.com/what-is-bhu" />
+  </url>
+  <url>
+    <loc>https://www.hkeasybhu.com/reg-01-checklist</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.hkeasybhu.com/reg-01-checklist" />
+  </url>
+  <url>
     <loc>https://www.hkeasybhu.com/pricing</loc>
-    <lastmod>2026-05-06</lastmod>
+    <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
     <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.hkeasybhu.com/pricing" />
   </url>
   <url>
     <loc>https://www.hkeasybhu.com/faq</loc>
-    <lastmod>2026-05-06</lastmod>
+    <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.hkeasybhu.com/faq" />
+  </url>
+  <url>
+    <loc>https://www.hkeasybhu.com/service-boundary-disclaimer</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.hkeasybhu.com/service-boundary-disclaimer" />
   </url>
 </urlset>
