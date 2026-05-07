@@ -135,4 +135,12 @@
     <priority>0.75</priority>
     <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.hkeasybhu.com/articles/should-you-do-it-yourself-or-hire-consultant" />
   </url>
+  <url>
+    <loc>https://www.hkeasybhu.com/ha-vr-sample-flats</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.hkeasybhu.com/ha-vr-sample-flats" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.hkeasybhu.com/ha-vr-sample-flats" />
+  </url>
 </urlset>
