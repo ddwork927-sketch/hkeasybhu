@@ -18,8 +18,8 @@
   --mist:       #ECF1F1;
   --line:       #D9D2C2;
   --line-soft:  #E8E2D3;
-  --muted:      #6B7B86;
-  --muted-2:    #8A9098;
+  --muted:      #5C6E7A;
+  --muted-2:    #6B7B86;
   --warning:    #C77A3A;
 
   --sans:    "Noto Sans TC", "PingFang TC", "Hiragino Sans CNS W3", "Microsoft JhengHei", system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
@@ -40,6 +40,23 @@
 /* ---------- Reset ---------- */
 *, *::before, *::after { box-sizing: border-box; }
 html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+
+/* ---------- A11y: skip-link + content offset ---------- */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  padding: 12px 18px;
+  background: var(--ink);
+  color: #fff;
+  font-weight: 700;
+  z-index: 9999;
+  border-radius: 0 0 8px 0;
+  text-decoration: none;
+}
+.skip-link:focus { left: 0; outline: 3px solid var(--teal); }
+#content { scroll-margin-top: 96px; outline: none; }
+:focus-visible { outline: 2px solid var(--teal); outline-offset: 3px; border-radius: 4px; }
 body {
   margin: 0;
   font-family: var(--sans);
@@ -795,13 +812,15 @@ section { padding: clamp(54px, 9vw, 110px) 0; }
   grid-template-columns: 1fr;
   margin-bottom: 36px;
 }
+.foot-block h3,
 .foot-block h4 {
   font-family: var(--sans);
   font-size: 12px;
+  font-weight: 700;
   letter-spacing: 0.22em;
   text-transform: uppercase;
   color: #6EE38C;
-  margin-bottom: 14px;
+  margin: 0 0 14px;
 }
 .foot-block ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 8px; }
 .foot-brand {

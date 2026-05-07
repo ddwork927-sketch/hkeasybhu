@@ -32,8 +32,11 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&family=Noto+Sans+TC:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/assets/css/styles.css">
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;700;800&family=Noto+Sans+TC:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;700;800&family=Noto+Sans+TC:wght@400;500;600;700;800&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;700;800&family=Noto+Sans+TC:wght@400;500;600;700;800&display=swap"></noscript>
+  <link rel="preload" as="style" href="/assets/css/styles.min.css">
+  <link rel="stylesheet" href="/assets/css/styles.min.css">
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32.png">
   <link rel="icon" type="image/png" sizes="192x192" href="/assets/images/favicon-192.png">
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/favicon-180.png">
@@ -72,6 +75,7 @@
   </script>
 </head>
 <body>
+  <a class="skip-link" href="#content">略過導覽，跳至主內容</a>
   <header class="topbar">
     <div class="wrap topbar-inner">
       <a class="brand" href="/" aria-label="簡樸通 HK Easy BHU">
@@ -103,6 +107,8 @@
     <a href="/faq"><span>FAQ／聯絡</span><span>→</span></a>
     <a class="drawer-cta" href="https://wa.me/85256876088" data-wa="" target="_blank" rel="noopener">WhatsApp 即時查詢</a>
   </div>
+
+  <main id="content" tabindex="-1">
   <section class="page-hero">
     <div class="wrap">
       <div class="crumbs"><a href="/">首頁</a><span>·</span>文章 / 資源</div>
@@ -206,6 +212,7 @@
       </div>
     </div>
   </section>
+  </main>
 
   <footer class="site-foot">
     <div class="wrap">
@@ -221,7 +228,7 @@
           </p>
         </div>
         <div class="foot-block">
-          <h4>網站導覽</h4>
+          <h3>網站導覽</h3>
           <ul>
             <li><a href="/">首頁</a></li>
             <li><a href="/registration-support">登記支援</a></li>
@@ -233,7 +240,7 @@
           </ul>
         </div>
         <div class="foot-block">
-          <h4>資源 / 邊界</h4>
+          <h3>資源 / 邊界</h3>
           <ul>
             <li><a href="/what-is-bhu">簡樸房懶人包</a></li>
             <li><a href="/reg-01-checklist">REG-01 文件清單</a></li>
@@ -243,7 +250,7 @@
           </ul>
         </div>
         <div class="foot-block">
-          <h4>聯絡資料</h4>
+          <h3>聯絡資料</h3>
           <ul>
             <li><a href="https://wa.me/85256876088" data-wa="" target="_blank" rel="noopener">WhatsApp · +852 5687 6088</a></li>
             <li><a href="tel:+85256876088">電話 · +852 5687 6088</a></li>
@@ -273,6 +280,6 @@
   </a>
 
   <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
-  <script src="/assets/js/main.js"></script>
+  <script src="/assets/js/main.js" defer></script>
 </body>
 </html>
