@@ -52,6 +52,41 @@
     <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.hkeasybhu.com/faq" />
   </url>
   <url>
+    <loc>https://www.hkeasybhu.com/articles</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.hkeasybhu.com/articles" />
+  </url>
+  <url>
+    <loc>https://www.hkeasybhu.com/articles/owner-tenant-asks-registration</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.hkeasybhu.com/articles/owner-tenant-asks-registration" />
+  </url>
+  <url>
+    <loc>https://www.hkeasybhu.com/articles/joint-owner-and-company-authorization</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.hkeasybhu.com/articles/joint-owner-and-company-authorization" />
+  </url>
+  <url>
+    <loc>https://www.hkeasybhu.com/articles/cost-breakdown-three-types</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.hkeasybhu.com/articles/cost-breakdown-three-types" />
+  </url>
+  <url>
+    <loc>https://www.hkeasybhu.com/articles/photos-and-floorplan-for-b-line</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.hkeasybhu.com/articles/photos-and-floorplan-for-b-line" />
+  </url>
+  <url>
     <loc>https://www.hkeasybhu.com/service-boundary-disclaimer</loc>
     <lastmod>2026-05-07</lastmod>
     <changefreq>yearly</changefreq>

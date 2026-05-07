@@ -78,9 +78,15 @@
   document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
 
   /* mark current nav link */
-  const path = location.pathname.split('/').pop() || 'index.html';
+  const fullPath = location.pathname;
+  const slug = fullPath.split('/').filter(Boolean).pop() || 'index';
+  const isArticleSub = fullPath.startsWith('/articles/') && slug !== 'articles';
   document.querySelectorAll('[data-nav]').forEach((link) => {
-    if (link.getAttribute('data-nav') === path.replace('.html', '')) {
+    const target = link.getAttribute('data-nav');
+    const norm = slug.replace('.html', '');
+    if (target === norm) {
+      link.classList.add('is-active');
+    } else if (isArticleSub && target === 'articles') {
       link.classList.add('is-active');
     }
   });
