@@ -93,4 +93,46 @@
     <priority>0.5</priority>
     <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.hkeasybhu.com/service-boundary-disclaimer" />
   </url>
+  <url>
+    <loc>https://www.hkeasybhu.com/about</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.hkeasybhu.com/about" />
+  </url>
+  <url>
+    <loc>https://www.hkeasybhu.com/articles/grace-period-timeline-explained</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.hkeasybhu.com/articles/grace-period-timeline-explained" />
+  </url>
+  <url>
+    <loc>https://www.hkeasybhu.com/articles/ar2-rental-evidence-explained</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.hkeasybhu.com/articles/ar2-rental-evidence-explained" />
+  </url>
+  <url>
+    <loc>https://www.hkeasybhu.com/articles/certification-pre-check-what-to-expect</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.hkeasybhu.com/articles/certification-pre-check-what-to-expect" />
+  </url>
+  <url>
+    <loc>https://www.hkeasybhu.com/articles/common-supplementary-document-list</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.hkeasybhu.com/articles/common-supplementary-document-list" />
+  </url>
+  <url>
+    <loc>https://www.hkeasybhu.com/articles/should-you-do-it-yourself-or-hire-consultant</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.hkeasybhu.com/articles/should-you-do-it-yourself-or-hire-consultant" />
+  </url>
 </urlset>

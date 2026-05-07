@@ -1315,7 +1315,7 @@ section { padding: clamp(54px, 9vw, 110px) 0; }
   .gov-bar-links { justify-content: flex-end; }
 }
 
-/* ---------- Anson / case manager profile ---------- */
+/* ---------- Consultant team / case manager profile ---------- */
 .profile {
   display: grid;
   gap: 22px;
