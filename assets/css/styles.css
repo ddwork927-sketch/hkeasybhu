@@ -2008,6 +2008,99 @@ section { padding: clamp(54px, 9vw, 110px) 0; }
 }
 
 /* =========================================================
+   Homepage policy updates (#updates)
+   ========================================================= */
+.policy-updates {
+  background: linear-gradient(180deg, var(--cream-2) 0%, var(--cream) 100%);
+  padding: 56px 0 64px;
+  border-bottom: 1px solid var(--line-soft);
+}
+.policy-updated {
+  margin: 8px 0 0;
+  font-size: 13.5px;
+}
+.policy-stats {
+  display: grid;
+  gap: 14px;
+  margin: 28px 0 32px;
+}
+.policy-stat {
+  padding: 20px 22px;
+  background: var(--paper);
+  border: 1px solid var(--line-soft);
+  border-radius: 16px;
+}
+.policy-stat strong {
+  display: block;
+  font-family: var(--display);
+  font-size: clamp(1.5rem, 3vw, 1.85rem);
+  color: var(--teal-deep);
+  line-height: 1.2;
+  margin-bottom: 6px;
+}
+.policy-stat span {
+  font-size: 14px;
+  line-height: 1.55;
+  color: var(--ink-soft);
+}
+.policy-feed {
+  display: grid;
+  gap: 12px;
+}
+.policy-feed-item {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 16px;
+  align-items: start;
+  padding: 18px 20px;
+  background: var(--paper);
+  border: 1px solid var(--line-soft);
+  border-radius: 16px;
+  text-decoration: none;
+  color: inherit;
+  transition: transform .18s, border-color .18s, box-shadow .18s;
+}
+.policy-feed-item:hover {
+  transform: translateY(-2px);
+  border-color: var(--teal);
+  box-shadow: 0 8px 24px rgba(6, 41, 66, 0.08);
+}
+.policy-feed-item time {
+  font-family: var(--display);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: var(--muted);
+  white-space: nowrap;
+  padding-top: 2px;
+}
+.policy-feed-item strong {
+  display: block;
+  font-size: 1rem;
+  color: var(--ink);
+  margin-bottom: 4px;
+}
+.policy-feed-item p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--ink-soft);
+}
+.policy-feed-arrow {
+  font-family: var(--display);
+  font-weight: 700;
+  color: var(--teal-deep);
+  padding-top: 2px;
+}
+@media (min-width: 700px) {
+  .policy-stats { grid-template-columns: repeat(2, 1fr); gap: 18px; }
+}
+@media (min-width: 960px) {
+  .policy-stats { grid-template-columns: repeat(4, 1fr); }
+  .policy-updates { padding: 64px 0 72px; }
+}
+
+/* =========================================================
    VR sample-flats page (/ha-vr-sample-flats)
    ========================================================= */
 .vr-page { padding-top: 32px; padding-bottom: 64px; }
