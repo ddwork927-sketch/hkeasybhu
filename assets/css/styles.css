@@ -1193,6 +1193,61 @@ section { padding: clamp(54px, 9vw, 110px) 0; }
   color: var(--muted);
 }
 
+/* ---------- Real visual reference cards ---------- */
+.visual-references {
+  background: var(--paper);
+  border-top: 1px solid var(--line-soft);
+  border-bottom: 1px solid var(--line-soft);
+}
+.visual-grid,
+.article-image-grid {
+  display: grid;
+  gap: 18px;
+}
+.visual-card,
+.article-image-grid figure {
+  display: block;
+  overflow: hidden;
+  background: var(--paper);
+  border: 1px solid var(--line-soft);
+  border-radius: 18px;
+  text-decoration: none;
+  color: inherit;
+  box-shadow: 0 12px 28px rgba(6, 41, 66, 0.06);
+}
+.visual-card img,
+.article-image-grid img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  background: var(--cream-2);
+}
+.visual-card strong {
+  display: block;
+  padding: 18px 18px 4px;
+  color: var(--ink);
+}
+.visual-card span {
+  display: block;
+  padding: 0 18px 18px;
+  font-size: 13.5px;
+  line-height: 1.65;
+  color: var(--muted);
+}
+.article-image-grid {
+  margin: 18px 0 8px;
+}
+.article-image-grid figure {
+  margin: 0;
+}
+.article-image-grid figcaption {
+  padding: 12px 14px 14px;
+  font-size: 13px;
+  line-height: 1.55;
+  color: var(--muted);
+}
+
 /* ---------- Pain points ---------- */
 .pain-grid {
   display: grid;
@@ -1994,6 +2049,8 @@ section { padding: clamp(54px, 9vw, 110px) 0; }
   .hero-meta { grid-template-columns: 1fr 1fr; }
   .hero-art { display: flex; }
   .category-grid { grid-template-columns: repeat(2, 1fr); }
+  .visual-grid,
+  .article-image-grid { grid-template-columns: repeat(2, 1fr); }
 
   .pain-grid { grid-template-columns: 1fr 1fr; }
 
@@ -2062,6 +2119,7 @@ section { padding: clamp(54px, 9vw, 110px) 0; }
   .pricing-grid.is-three { grid-template-columns: repeat(3, 1fr); }
   .category-grid { grid-template-columns: repeat(5, 1fr); }
   .category-card { min-height: 178px; padding: 24px 20px 22px; }
+  .visual-grid { grid-template-columns: repeat(3, 1fr); }
 
   .process-step { grid-template-columns: 110px 1fr 1fr; gap: 40px; }
   .process-step h3 { padding-right: 0; }
