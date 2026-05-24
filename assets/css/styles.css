@@ -2117,6 +2117,7 @@ section { padding: clamp(54px, 9vw, 110px) 0; }
 
   .pricing-grid { grid-template-columns: repeat(4, 1fr); }
   .pricing-grid.is-three { grid-template-columns: repeat(3, 1fr); }
+  .pricing-grid.is-two { grid-template-columns: repeat(2, 1fr); max-width: 980px; margin-left: auto; margin-right: auto; }
   .category-grid { grid-template-columns: repeat(5, 1fr); }
   .category-card { min-height: 178px; padding: 24px 20px 22px; }
   .visual-grid { grid-template-columns: repeat(3, 1fr); }
