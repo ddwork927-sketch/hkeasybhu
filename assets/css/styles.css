@@ -2118,8 +2118,6 @@ section { padding: clamp(54px, 9vw, 110px) 0; }
   .pricing-grid { grid-template-columns: repeat(4, 1fr); }
   .pricing-grid.is-three { grid-template-columns: repeat(3, 1fr); }
   .pricing-grid.is-two { grid-template-columns: repeat(2, 1fr); max-width: 980px; margin-left: auto; margin-right: auto; }
-  .inspection-highlights { grid-template-columns: repeat(2, 1fr); }
-  .inspection-grid { grid-template-columns: repeat(4, 1fr); }
   .category-grid { grid-template-columns: repeat(5, 1fr); }
   .category-card { min-height: 178px; padding: 24px 20px 22px; }
   .visual-grid { grid-template-columns: repeat(3, 1fr); }
@@ -2142,88 +2140,97 @@ section { padding: clamp(54px, 9vw, 110px) 0; }
 }
 
 /* =========================================================
-   Inspection scope (homepage)
+   Inspection scope (homepage + service pages)
    ========================================================= */
 .inspection-scope {
   background: linear-gradient(180deg, var(--cream) 0%, var(--paper) 100%);
   padding: 56px 0 64px;
   border-bottom: 1px solid var(--line-soft);
 }
-.inspection-highlights {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 18px;
-  margin: 28px 0 32px;
-}
-.inspection-highlight {
-  display: grid;
-  grid-template-columns: 44px 1fr;
-  gap: 16px;
-  align-items: start;
-  padding: 22px 22px 20px;
-  background: #fff;
-  border: 1px solid var(--line-soft);
-  border-left: 4px solid var(--teal-deep);
-  border-radius: 14px;
-  box-shadow: 0 4px 14px rgba(6, 41, 66, 0.04);
-}
-.inspection-highlight .inspection-icon {
-  width: 44px;
-  height: 44px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  background: var(--teal-deep);
-  color: #fff;
-  border-radius: 12px;
-  flex-shrink: 0;
-}
-.inspection-highlight strong {
-  display: block;
-  font-size: 1.05rem;
-  color: var(--ink);
-  margin: 2px 0 8px;
-  line-height: 1.4;
-}
-.inspection-highlight p {
-  margin: 0 0 8px;
-  font-size: 14.5px;
-  line-height: 1.75;
-  color: var(--ink);
-}
-.inspection-highlight .inspection-tip {
-  display: inline-block;
-  font-size: 12.5px;
-  color: #6b7a83;
-  padding: 3px 10px;
-  background: var(--cream-2);
-  border-radius: 999px;
-}
-.inspection-grid {
+.scope-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 14px;
+  gap: 16px;
+  margin-top: 32px;
 }
-.inspection-card {
+.scope-item {
   background: #fff;
   border: 1px solid var(--line-soft);
-  border-radius: 12px;
-  padding: 18px 18px 16px;
-  min-height: 110px;
+  border-radius: 14px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 2px 8px rgba(6, 41, 66, 0.04);
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+  position: relative;
+}
+.scope-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(6, 41, 66, 0.08);
+}
+.scope-item-figure {
+  position: relative;
+  background: var(--cream);
+  aspect-ratio: 1 / 1;
+  display: block;
+  overflow: hidden;
+}
+.scope-item-figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.scope-item-badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: #fff;
+  background: var(--teal-deep);
+  padding: 4px 10px;
+  border-radius: 999px;
+  box-shadow: 0 2px 6px rgba(6, 41, 66, 0.18);
+  z-index: 2;
+}
+.scope-item-num {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--teal-deep);
+  background: rgba(255, 255, 255, 0.92);
+  padding: 3px 9px;
+  border-radius: 999px;
+  letter-spacing: 0.02em;
+}
+.scope-item-body {
+  padding: 16px 16px 18px;
   display: flex;
   flex-direction: column;
   gap: 6px;
+  flex: 1;
 }
-.inspection-card strong {
-  font-size: 0.97rem;
-  color: var(--ink);
+.scope-item-body strong {
+  font-size: 0.98rem;
   line-height: 1.4;
+  color: var(--ink);
 }
-.inspection-card p {
+.scope-item-body p {
   margin: 0;
   font-size: 13.5px;
-  line-height: 1.65;
+  line-height: 1.7;
   color: #5a6770;
+}
+@media (min-width: 720px) {
+  .scope-grid { grid-template-columns: repeat(3, 1fr); gap: 18px; }
+}
+@media (min-width: 1024px) {
+  .scope-grid { grid-template-columns: repeat(5, 1fr); gap: 20px; }
+  .scope-item-body { padding: 16px 16px 18px; }
 }
 
 /* =========================================================
