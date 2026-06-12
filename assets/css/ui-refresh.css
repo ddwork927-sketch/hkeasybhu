@@ -263,9 +263,12 @@ section {
 }
 
 .foot-brand img {
-  height: 68px;
-  max-width: 250px;
+  height: 48px;
+  max-width: 188px;
   object-fit: contain;
+  filter: none !important;
+  opacity: 1 !important;
+  mix-blend-mode: normal !important;
 }
 
 .fab {
@@ -368,7 +371,8 @@ section {
   }
 
   .foot-brand img {
-    height: 58px;
+    height: 42px;
+    max-width: 162px;
   }
 }
 
@@ -399,6 +403,11 @@ section {
   }
 
   .brand img {
+    height: 56px;
+    max-width: 212px;
+  }
+
+  .foot-brand img {
     height: 56px;
     max-width: 212px;
   }
